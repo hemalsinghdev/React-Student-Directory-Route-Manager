@@ -1,21 +1,25 @@
 # 🎓 React Student Directory & Route Manager
 
-A clean, modern, beginner-friendly React web application created to practice core React concepts including reusable components, client-side routing, form state management, props, and responsive CSS styling.
+A modern, responsive React web application built with **React 19**, **React Router v7**, and **Vite**. The application demonstrates core React concepts including reusable component architecture, client-side routing, shared state management via props, controlled form handling, and custom CSS design.
 
-![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![React Router](https://img.shields.io/badge/React_Router-7-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-7-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-Modern-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+---
+
+## ⚡ Tech Stack
+
+- **Frontend Library:** [React 19](https://react.dev/)
+- **Routing:** [React Router v7](https://reactrouter.com/)
+- **Build Tool:** [Vite 7](https://vite.dev/)
+- **Styling:** Custom CSS3 (Modern Light Slate Theme with Flexbox & Grid)
 
 ---
 
 ## ✨ Features
 
-- 🎨 **Modern & Professional UI**: Soft light slate theme, crisp white cards, vibrant blue accents, and subtle box shadows.
-- 🧭 **Multi-Page Routing**: Smooth client-side navigation between pages using `react-router-dom`.
-- 👤 **Personal Details & Profile Card**: Interactive form to edit profile details with live preview card updating and skill badges.
-- 📩 **Contact Page**: Contact form with submission feedback alongside saved profile data cards.
-- 📱 **Fully Responsive**: Mobile-friendly navigation toggle and responsive grid layouts for desktop, tablet, and mobile screens.
+- 🧭 **Multi-Page Client Routing**: Dynamic seamless navigation across Home, Personal Details, and Contact pages without page reloads.
+- 👤 **Shared Profile State**: Edit student profile details (Name, Age, Email, Phone, Location, Education) with instant live preview.
+- 📩 **Interactive Contact & Feedback Form**: Submit messages with instant UI validation feedback and view saved profile summary cards.
+- 🎨 **Modern & Responsive UI**: Responsive top navigation bar with mobile menu toggle, card grid layouts, subtle shadows, and sleek action buttons.
+- 🏷️ **Dynamic Skill Badges**: Clean visual tags for technical skills and educational info.
 
 ---
 
@@ -25,32 +29,31 @@ A clean, modern, beginner-friendly React web application created to practice cor
 practical1/
 ├── src/
 │   ├── components/
-│   │   ├── Navbar.jsx           # Reusable Header Nav with active link highlighting & mobile toggle
-│   │   ├── Footer.jsx           # Footer component with quick links & copyright
-│   │   ├── Home.jsx             # Hero section, feature checklist & practice cards grid
-│   │   ├── PersonalDetails.jsx  # Personal details form & live profile preview card
-│   │   └── Contact.jsx          # Contact form, direct contact info & saved data card
-│   ├── App.css                  # Extra component utility styles
-│   ├── index.css                # Global CSS reset & theme variables
-│   ├── main.jsx                 # Application entry point
-│   ├── StudentPage.css          # Main layout, card, button & responsive CSS rules
-│   └── StudentPage.jsx          # Main layout wrapper managing routes & state
-├── index.html                   # HTML template
-├── package.json                 # Project dependencies & scripts
-└── vite.config.js               # Vite build configuration
+│   │   ├── Navbar.jsx          # Top Navigation Bar with active link highlights
+│   │   ├── Footer.jsx          # App footer with copyright and links
+│   │   ├── Home.jsx            # Landing page with welcome overview & features grid
+│   │   ├── PersonalDetails.jsx # Profile edit form & live profile preview card
+│   │   └── Contact.jsx         # Contact form & saved profile detail cards
+│   ├── App.css                 # Default Vite styles
+│   ├── App.jsx                 # Base Vite starter template
+│   ├── index.css               # Global typography and base styles
+│   ├── main.jsx                # Application root entry point
+│   ├── StudentPage.jsx         # Main router wrapper & central state store
+│   └── StudentPage.css         # Complete app styling & design system
+├── index.html                  # Main HTML entry file
+├── package.json                # Dependencies and scripts
+└── vite.config.js              # Vite server configuration
 ```
 
 ---
 
-## 🛠️ Concepts Practiced
+## 🛣️ Application Routes
 
-| Concept | Description |
-| --- | --- |
-| **Components** | Building reusable UI components like `Navbar`, `Footer`, and page views. |
-| **React Router** | Multi-page routing (`/`, `/personal`, `/contact`) using `BrowserRouter`, `Routes`, `Route`, and `NavLink`. |
-| **State Management** | Managing form input state with `useState` and passing state across components via `props`. |
-| **Form Handling** | Capturing input data, handling `onSubmit` events, and preventing page refreshes. |
-| **Responsive CSS** | Clean layout design using CSS Flexbox, Grid, custom CSS variables, and `@media` queries. |
+| Route | Component | Description |
+| :--- | :--- | :--- |
+| `/` | `<Home />` | Welcome dashboard, quick navigation cards, & key features overview. |
+| `/personal` | `<PersonalDetails />` | Form to edit personal/student info & real-time live preview card. |
+| `/contact` | `<Contact />` | Contact message form with submission status feedback & profile summary. |
 
 ---
 
@@ -58,49 +61,35 @@ practical1/
 
 ### Prerequisites
 
-Make sure you have [Node.js](https://nodejs.org/) (v18 or higher) installed on your machine.
+- **Node.js** (v18.0.0 or higher recommended)
+- **npm** or **yarn**
 
-### Installation & Local Setup
+### Installation & Running Locally
 
-1. **Clone the repository**:
+1. **Clone or navigate to the project directory**:
    ```bash
    git clone https://github.com/hemalsinghdev/React-Student-Directory-Route-Manager.git
-   ```
-
-2. **Navigate into the project directory**:
-   ```bash
    cd React-Student-Directory-Route-Manager/practical1
    ```
 
-3. **Install dependencies**:
+2. **Install dependencies**:
    ```bash
    npm install
    ```
 
-4. **Start the development server**:
+3. **Start the development server**:
    ```bash
    npm run dev
    ```
 
-5. **Open in Browser**:
-   Visit [http://localhost:5173/](http://localhost:5173/) to view the application live.
+4. **Open in browser**:
+   Navigate to [http://localhost:5173/](http://localhost:5173/)
 
 ---
 
-## 📜 Available Scripts
+## 🛠️ Scripts
 
-In the `practical1` project directory, you can run:
-
-- `npm run dev` — Runs the app in development mode with HMR.
-- `npm run build` — Builds the app for production in the `dist` folder.
-- `npm run preview` — Locally previews the production build.
-
----
-
-## 👤 Author
-
-- **Hemal Singh** — GitHub: [@hemalsinghdev](https://github.com/hemalsinghdev)
-
----
-
-⭐ *If you found this practice project helpful, feel free to give it a star on GitHub!*
+- `npm run dev`: Starts the Vite development server.
+- `npm run build`: Builds the production bundle to `dist/`.
+- `npm run preview`: Previews the production build locally.
+- `npm run lint`: Runs ESLint for code analysis.
